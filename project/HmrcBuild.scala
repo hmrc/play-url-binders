@@ -16,6 +16,7 @@ object HmrcBuild extends Build {
     .enablePlugins(SbtAutoBuildPlugin, SbtGitVersioning)
     .settings(
       targetJvm := "jvm-1.7",
+      scalaVersion := "2.11.7",
       libraryDependencies ++= appDependencies,
       crossScalaVersions := Seq("2.11.7"),
       resolvers := Seq(
@@ -32,12 +33,12 @@ object Dependencies {
   import play.core.PlayVersion
 
   val compile = Seq(
-    "com.typesafe.play" %% "play" % PlayVersion.current
+    "com.typesafe.play" %% "play" % PlayVersion.current % "provided"
   )
 
   val test = Seq(
-    "org.scalatest" %% "scalatest" % "2.2.2" % "test",
-    "org.pegdown" % "pegdown" % "1.4.2" % "test"
+    "org.scalatest" %% "scalatest" % "2.2.4" % "test",
+    "org.pegdown" % "pegdown" % "1.5.0" % "test"
   )
 
 }
