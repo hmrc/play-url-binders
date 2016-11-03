@@ -1,3 +1,6 @@
+DEPRECATED. This has now been retired, code has been merged into [play-ui](https://github.com/hmrc/play-ui)
+
+
 play-url-binders
 ================
 
